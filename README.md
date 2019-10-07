@@ -5,9 +5,9 @@
 # Aplicación de Escritorio OffShell System.
 # Para usuari@s y programadores Underground.
 # Instrucciones de instalación y ejecución del programa:
-  · Descargar el programa.
-  · Extraer el archivo en la carpeta deseada.
-  · Dar permisos de ejecución al archivo con el comando:
-      # ~$: chmod +x OffShell-System-AppDesktop.py.
-  · Como último paso ejecutar el programa con el comando: 
-      # ~$: ./OffShell-System-AppDesktop.py
+ - Descargar el programa.
+ - Extraer el archivo en la carpeta deseada.
+ - Dar permisos de ejecución al archivo con el comando:
+  # ~$: chmod +x OffShell-System-AppDesktop.py.
+ - Como último paso ejecutar el programa con el comando: 
+  # ~$: ./OffShell-System-AppDesktop.py
