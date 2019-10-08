@@ -244,10 +244,10 @@ imgicono = PhotoImage(file="world.gif")
 
 # /Botones de pantalla de inicio
 
-botonBienvenido=Frame(root, width=2000, height=2000)
+botonBienvenido=Frame(root, width=1024, height=1024)
 botonBienvenido.pack(fill=BOTH, expand=YES)
 botonBienvenido.place(x=0, y=0, relwidth=1, relheight=1)
-Button(botonBienvenido, image=imgicono, cursor="heart", justify="center", bd=5, relief="raised", overrelief="sunken", background="black", activebackground='DarkRed', activeforeground='white', foreground='White', font=("URW Chancery L", 15)).pack()
+Button(botonBienvenido, image=imgicono, cursor="heart", justify="center", bd=5, relief="raised", overrelief="sunken", background="DarkRed", activebackground='DarkRed', activeforeground='white', foreground='White', font=("URW Chancery L", 15)).pack()
 
 root.mainloop()
 
