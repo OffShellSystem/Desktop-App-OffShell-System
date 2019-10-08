@@ -240,7 +240,7 @@ wmenu.pack(fill=BOTH, expand=YES)
 
 # /Imagen de fondo.
 
-imgicono = PhotoImage(file="triangulo_fondo.gif")
+imgicono = PhotoImage(file="world.gif")
 
 # /Botones de pantalla de inicio
 
