@@ -176,8 +176,7 @@ root = Tk()
 
 root.title("··· OffShell System Aplication -- Luka Version (0.1) -- for Gnu/Linux···")
 root.geometry("1024x720+130+50")
-root.resizable(width=True, height=True)
-
+root.resizable(width=False, height=False)
 
 barramenu=Menu(root, relief=RAISED, cursor="heart", activebackground='Black', foreground='white', activeforeground='Red', activeborderwidth=3, bg='Black', bd=3)
 
@@ -235,25 +234,20 @@ barramenu.add_cascade(label="Sobre Nosotros", menu=archsobreNosotros, font=("URW
 barramenu.add_cascade(label="Salir", menu=archSalir, font=("URW Chancery L", 15))
 
 # /vENTANA INICIO APLCACIÓN.
-wmenu=Frame(root, width=600, height=720)
-wmenu.place(x=0, y=0)
+wmenu=Frame(root, width=2000, height=1024)
+wmenu.place(x=0, y=0, relwidth=1, relheight=1)
 wmenu.pack(fill=BOTH, expand=YES)
 
 # /Imagen de fondo.
 
-imgicono = PhotoImage(file="primatebig.gif")
+imgicono = PhotoImage(file="triangulo_fondo.gif")
 
 # /Botones de pantalla de inicio
 
-botonBienvenido=Frame(root, width=200, height=200)
-botonBienvenido.pack(fill=BOTH, expand=YES, anchor="n")
-
-Button(botonBienvenido, command=botonBienvenido.destroy, cursor="heart", text="Bienvenido a OffShell System\nTe encuentras ante una aplicación de Software Libre\ncreada por y para Usuari@s\nLos diálogos que aprecen en pantalla son interactivos.\nPulsa sobre ellos para continuar.", justify="center", bd=5, relief="raised", overrelief="sunken", background="black", activebackground='DarkRed', activeforeground='white', foreground='White', font=("URW Chancery L", 15)).pack()
-
-Label(wmenu, image=imgicono, width=0, anchor="center").pack(fill=BOTH, expand=YES)
-
-Label(root, width=0, anchor="se", text="Bienvenido Usuari@\n-- Aplicación Versión {Luka} --\n-- Licencia GPL Versión 3 --\n*Pulsa sobre los dialogos para continuar.*", font=("URW Chancery L", 18), fg="DarkRed").pack(fill=BOTH, expand=YES)
-
-
+botonBienvenido=Frame(root, width=2000, height=2000)
+botonBienvenido.pack(fill=BOTH, expand=YES)
+botonBienvenido.place(x=0, y=0, relwidth=1, relheight=1)
+Button(botonBienvenido, image=imgicono, cursor="heart", justify="center", bd=5, relief="raised", overrelief="sunken", background="black", activebackground='DarkRed', activeforeground='white', foreground='White', font=("URW Chancery L", 15)).pack()
 
 root.mainloop()
+
