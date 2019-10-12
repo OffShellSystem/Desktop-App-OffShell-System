@@ -13,4 +13,4 @@
  - Como último paso ejecutar el programa con el comando: 
   # ~$: ./OffShell-System-AppDesktop.py
 # Donaciones:
-  https://www.paypal.com/donate/?token=rSoxezaPuwZFABb9q1uRRdQYMlcizMBk-Ky9cUIlOTYjPOBENpbRN1-oYzW0wxdnIFGQhG&country.x=ES&locale.x=ES
+  https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=EERJ8BWALEMUG&source=url
