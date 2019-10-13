@@ -12,5 +12,6 @@
   # ~$: chmod +x OffShell-System-AppDesktop.py.
  - Como último paso ejecutar el programa con el comando: 
   # ~$: ./OffShell-System-AppDesktop.py
-# Donaciones:
-  https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=EERJ8BWALEMUG&source=url
+# ¿Que tal un café?
+Si te gustan mis Scripts, puedes invitarme a un café para animarme a aseguir publicando más.
+https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=EERJ8BWALEMUG&source=url
