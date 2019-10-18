@@ -3,7 +3,6 @@
 ![alt text](https://4.bp.blogspot.com/-0cryA22dyKw/XZUQw7cBBQI/AAAAAAAAC4k/w10SDiY77ngeKSFpe1GM0mKKhZJ_PIqjwCK4BGAYYCw/s1280/primate.gif)
 # Aplicación de Escritorio OffShell System.
   - Vídeo Yotube: https://www.youtube.com/watch?v=day8SQq1yuk
-# Para usuari@s y programadores Underground.
   Es la primera versión, se incluirá contenido y actualizaciones de forma continua.
 # Instrucciones de instalación y ejecución del programa:
  - Descargar el programa.
