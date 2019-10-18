@@ -252,7 +252,7 @@ Button(botonBienvenido, image=imgicono, cursor="heart", justify="center", bd=5, 
 root.mainloop()
 
 
-Licencia de Creative Commons
-OffShell System by Alexandre Varela Sixto is licensed under a Creative Commons Reconocimiento-NoComercial-SinObraDerivada 4.0 Internacional License.
-Creado a partir de la obra en https://offshellsystemconnection.blogspot.com/p/software.html.
+#Licencia de Creative Commons
+#OffShell System by Alexandre Varela Sixto is licensed under a Creative Commons Reconocimiento-NoComercial-SinObraDerivada 4.0 Internacional License.
+#Creado a partir de la obra en https://offshellsystemconnection.blogspot.com/p/software.html.
 
