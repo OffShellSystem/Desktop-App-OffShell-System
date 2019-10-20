@@ -3,9 +3,38 @@
 
 from Tkinter import *
 import webbrowser
+from subprocess import call
+import subprocess
+import commands
 import os
+import subprocess as sub
+import Tkinter as tk
 
 # /Defino funciones
+
+def instalacion():
+
+	win_instalacion = tk.Tk()
+	win_instalacion.title("Luka Vision. Version Test")
+	win_instalacion.geometry("600x420+330+190")
+	win_instalacion.resizable(width=False, height=False)
+	win_instalacion.config(width=300, height=300, cursor="heart", bg="black")
+
+	lb1=Label(win_instalacion, width=0, anchor="e", text="La instalación ha teminado.\nDisfruta de OffSHell System Software.", font=("URW Chancery L", 18), bg="black", fg="White").pack()
+
+	boton_volver=Frame(win_instalacion, width=50, height=60)
+	boton_volver.place(x=250, y=100)
+	Button(boton_volver, command=lambda:[win_instalacion.destroy()], text="Volver", cursor="heart", justify="center", bd=1, relief="raised", overrelief="sunken", background="black", activebackground='orange', activeforeground='white', foreground='orange', font=("URW Chancery L", 20)).pack()
+
+
+	call('sudo apt-get install speedtest-cli', shell=True)
+	call('sudo apt-get install vlc', shell=True)
+	call('sudo apt-get install info', shell=True)
+	call('sudo apt-get install hostname', shell=True)
+	call('sudo apt-get install lshw', shell=True)
+
+	pass
+
 
 def software(): # Definición de la pantalla de Tienda de Software.
 	ventanasoft = Tk()
@@ -117,6 +146,7 @@ def usuarios():
 	win_usuarios.geometry("1024x720+130+50")
 	win_usuarios.resizable(width=False, height=False)
 
+
 	Label(win_usuarios, width=0, anchor="n", text="Miembros de la comunidad de offShell System\nUsuari@s pasionales y desarrolladores de Software independiente", font=("URW Chancery L", 18), bg="black", fg="Red").pack(fill=BOTH, expand=YES)
 
 	botonOffshell=Frame(win_usuarios, width=50, height=50)
@@ -140,7 +170,7 @@ def offShell():
 	win_offshell.config(cursor="heart", background='black')
 	win_offshell.resizable(width=False, height=False)
 	win_offshell.geometry("950x250+170+300")
-	
+
 	Label(win_offshell, width=0, anchor="n", text="Off-Shell significa una partícula sin movimiento en física cuántica.\nEscogí este alias porque estuve sin movimiento durante muchos años en el ámbito tecnológico,\nhasta que por motivos personales descubrí un mundo increíble en las comunidades de Usuari@s.\nPersonas apasionadas y colaborativas que no dudan en fomentar\nun lugar mejor donde interactuar y aprender unos de otros.\nPor tod@s y cada un@ de ell@s me encuentro aquí con vosotr@s, usuari@s del cambio.", font=("URW Chancery L", 18), bg="black", fg="Red").pack(fill=BOTH, expand=YES)
 
 	botonOffGit=Frame(win_offshell, width=50, height=50)
@@ -161,13 +191,139 @@ def offShell():
 
 	Button(botonOffSalir, command=lambda:[win_offshell.destroy()], cursor="heart", text="Volver", justify="center", bd=5, relief="raised", overrelief="sunken", background="black", activebackground='DarkRed', activeforeground='white', foreground='White', font=("URW Chancery L", 16)).pack()
 
-
 	pass
 
 def offwebperfil():
 	webbrowser.open_new_tab("https://offshellsystemconnection.blogspot.com/p/bienvenido.html")
 
 	pass
+
+
+def Ram_Metricas():
+
+	p = sub.Popen(["free"],stdout=sub.PIPE,stderr=sub.PIPE)
+	output, errors = p.communicate()
+	
+	win_ram = tk.Tk()
+	win_ram.title("Luka Vision. Test Mode")
+	win_ram.geometry("600x420+330+190")
+	win_ram.resizable(width=False, height=False)
+	win_ram.config(width=300, height=300, cursor="heart", bg="black")
+
+	text = tk.Text(win_ram)
+	text.pack()
+	text.insert(tk.END, output)
+
+	botonVolver=Frame(win_ram, width=50, height=100)
+	botonVolver.place(x=250, y=350)
+	Button(botonVolver, command=lambda:[win_ram.destroy()], text="Volver", cursor="heart", justify="center", bd=1, relief="raised", overrelief="sunken", background="black", activebackground='DarkRed', activeforeground='white', foreground='White', font=("URW Chancery L", 20)).pack()
+
+
+	pass
+
+
+def speedtest():
+
+	p = sub.Popen(["speedtest"],stdout=sub.PIPE,stderr=sub.PIPE)
+	output, errors = p.communicate()
+	
+	win_test_internet = tk.Tk()
+	win_test_internet.title("Luka Vision. Test Mode")
+	win_test_internet.geometry("600x420+330+190")
+	win_test_internet.resizable(width=False, height=False)
+	win_test_internet.config(width=300, height=300, cursor="heart", bg="black")
+	text = tk.Text(win_test_internet)
+	text.pack()
+	text.insert(tk.END, output)
+
+	botonVolver=Frame(win_test_internet, width=50, height=100)
+	botonVolver.place(x=250, y=350)
+	Button(botonVolver, command=lambda:[win_test_internet.destroy()], text="Volver", cursor="heart", justify="center", bd=1, relief="raised", overrelief="sunken", background="black", activebackground='orange', activeforeground='white', foreground='White', font=("URW Chancery L", 20)).pack()
+
+
+	pass
+
+def comandos_gnu():
+	p = sub.Popen(["info"],stdout=sub.PIPE,stderr=sub.PIPE)
+	output, errors = p.communicate()
+	
+	win_comandos_gnu = tk.Tk()
+	win_comandos_gnu.title("Luka Vision. Test Mode")
+	win_comandos_gnu.geometry("600x420+330+190")
+	win_comandos_gnu.resizable(width=False, height=False)
+	win_comandos_gnu.config(width=300, height=300, cursor="heart", bg="black")
+	text = tk.Text(win_comandos_gnu)
+	text.pack()
+	text.insert(tk.END, output)
+
+	botonVolver=Frame(win_comandos_gnu, width=50, height=100)
+	botonVolver.place(x=250, y=350)
+	Button(botonVolver, command=lambda:[win_comandos_gnu.destroy()], text="Volver", cursor="heart", justify="center", bd=1, relief="raised", overrelief="sunken", background="black", activebackground='orange', activeforeground='white', foreground='White', font=("URW Chancery L", 20)).pack()
+
+	pass
+
+
+def hardware_metricas():
+	p = sub.Popen(["lshw"],stdout=sub.PIPE,stderr=sub.PIPE)
+	output, errors = p.communicate()
+	
+	win_comandos_gnu = tk.Tk()
+	win_comandos_gnu.title("Luka Vision. Test Mode")
+	win_comandos_gnu.geometry("600x420+330+190")
+	win_comandos_gnu.resizable(width=False, height=False)
+	win_comandos_gnu.config(width=300, height=300, cursor="heart", bg="black")
+	text = tk.Text(win_comandos_gnu)
+	text.pack()
+	text.insert(tk.END, output)
+
+	botonVolver=Frame(win_comandos_gnu, width=50, height=100)
+	botonVolver.place(x=250, y=350)
+	Button(botonVolver, command=lambda:[win_comandos_gnu.destroy()], text="Volver", cursor="heart", justify="center", bd=1, relief="raised", overrelief="sunken", background="black", activebackground='orange', activeforeground='white', foreground='White', font=("URW Chancery L", 20)).pack()
+
+	pass
+
+
+def procesador():
+	p = sub.Popen(["lscpu"],stdout=sub.PIPE,stderr=sub.PIPE)
+	output, errors = p.communicate()
+	
+	win_comandos_gnu = tk.Tk()
+	win_comandos_gnu.title("Luka Vision. Test Mode")
+	win_comandos_gnu.geometry("600x420+330+190")
+	win_comandos_gnu.resizable(width=False, height=False)
+	win_comandos_gnu.config(width=300, height=300, cursor="heart", bg="black")
+	text = tk.Text(win_comandos_gnu)
+	text.pack()
+	text.insert(tk.END, output)
+
+	botonVolver=Frame(win_comandos_gnu, width=50, height=100)
+	botonVolver.place(x=250, y=350)
+	Button(botonVolver, command=lambda:[win_comandos_gnu.destroy()], text="Volver", cursor="heart", justify="center", bd=1, relief="raised", overrelief="sunken", background="black", activebackground='orange', activeforeground='white', foreground='White', font=("URW Chancery L", 20)).pack()
+
+	pass
+
+
+
+def actividad_procesador():
+	p = sub.Popen(['who', '-a'],stdout=sub.PIPE,stderr=sub.PIPE)
+	output, errors = p.communicate()
+	
+	win_comandos_gnu = tk.Tk()
+	win_comandos_gnu.title("Luka Vision. Test Mode")
+	win_comandos_gnu.geometry("600x420+330+190")
+	win_comandos_gnu.resizable(width=False, height=False)
+	win_comandos_gnu.config(width=300, height=300, cursor="heart", bg="black")
+	text = tk.Text(win_comandos_gnu)
+	text.pack()
+	text.insert(tk.END, output)
+
+	botonVolver=Frame(win_comandos_gnu, width=50, height=100)
+	botonVolver.place(x=250, y=350)
+	Button(botonVolver, command=lambda:[win_comandos_gnu.destroy()], text="Volver", cursor="heart", justify="center", bd=1, relief="raised", overrelief="sunken", background="black", activebackground='orange', activeforeground='white', foreground='White', font=("URW Chancery L", 20)).pack()
+
+	pass
+
+
 
 
 # /Ventana principal con menu_bar.
@@ -178,18 +334,29 @@ root.title("··· OffShell System Aplication -- Luka Version (0.1) -- for Gnu/L
 root.geometry("1024x720+130+50")
 root.resizable(width=False, height=False)
 
-barramenu=Menu(root, relief=RAISED, cursor="heart", activebackground='Black', foreground='white', activeforeground='Red', activeborderwidth=3, bg='Black', bd=3)
+
+barramenu=Menu(root, relief=RAISED, cursor="heart", activebackground='Black', foreground='white', activeforeground='Red', activeborderwidth=3, bg='Black', bd=5)
 
 root.config(menu=barramenu, width=300, height=300, cursor="heart")
 
 
 archMenu=Menu(barramenu, tearoff=0)
 
-archMenu.add_command(label="Proyecto", command=sobreNosotros, font=("URW Chancery L", 14), background='DarkRed', activebackground='Black', foreground='white', activeforeground='white')
+archMenu.add_command(label="Instalación.(Recomendada)", command=instalacion, font=("URW Chancery L", 14), background='DarkRed', activebackground='black', foreground='white', activeforeground='white')
 
-archMenu.add_command(label="Comunidad", command=comunidad, font=("URW Chancery L", 14), background='DarkRed', activebackground='Black', foreground='white', activeforeground='white')
+archMenu.add_command(label="Métrica Memoria Ram", command=Ram_Metricas, font=("URW Chancery L", 14), background='DarkRed', activebackground='Black', foreground='white', activeforeground='white')
 
-archMenu.add_command(label="Únete como Usuari@", command=unete, font=("URW Chancery L", 14), background='DarkRed', activebackground='black', foreground='white', activeforeground='white')
+archMenu.add_command(label="Speed Test Internet", command=speedtest, font=("URW Chancery L", 14), background='DarkRed', activebackground='Black', foreground='white', activeforeground='white')
+
+archMenu.add_command(label="Gía Comandos Gnu", command=comandos_gnu, font=("URW Chancery L", 14), background='DarkRed', activebackground='black', foreground='white', activeforeground='white')
+
+archMenu.add_command(label="Especificaciones Hardware", command=hardware_metricas, font=("URW Chancery L", 14), background='DarkRed', activebackground='black', foreground='white', activeforeground='white')
+
+archMenu.add_command(label="Especificaciones Procesador", command=procesador, font=("URW Chancery L", 14), background='DarkRed', activebackground='black', foreground='white', activeforeground='white')
+
+archMenu.add_command(label="Actividad Procesos Procesador", command=actividad_procesador, font=("URW Chancery L", 14), background='DarkRed', activebackground='black', foreground='white', activeforeground='white')
+
+
 
 
 archPlataformasWeb=Menu(barramenu, tearoff=0)
@@ -214,6 +381,8 @@ archMiembros.add_command(label="Ver Usuari@s OffShell System", command=usuarios,
 archsobreNosotros=Menu(barramenu, tearoff=0)
 
 archsobreNosotros.add_command(label="Proyecto OffShell System", command=sobreNosotros, font=("URW Chancery L", 14), background='DarkRed', activebackground='black', foreground='white', activeforeground='white')
+
+archsobreNosotros.add_command(label="Únete como Usuari@", command=unete, font=("URW Chancery L", 14), background='DarkRed', activebackground='black', foreground='white', activeforeground='white')
 
 
 archSalir=Menu(barramenu, tearoff=0,)
@@ -246,8 +415,8 @@ imgicono = PhotoImage(file="world.gif")
 
 botonBienvenido=Frame(root, width=1024, height=1024)
 botonBienvenido.pack(fill=BOTH, expand=YES)
-botonBienvenido.place(x=0, y=0, relwidth=1, relheight=1)
-Button(botonBienvenido, image=imgicono, cursor="heart", justify="center", bd=5, relief="raised", overrelief="sunken", background="DarkRed", activebackground='DarkRed', activeforeground='white', foreground='White', font=("URW Chancery L", 15)).pack()
+botonBienvenido.place(x=0, y=0)
+Button(botonBienvenido, image=imgicono, cursor="heart", justify="center", bd=3, relief="raised", overrelief="sunken", background="DarkRed", activebackground='DarkRed', activeforeground='white', foreground='White', font=("URW Chancery L", 15)).pack()
 
 root.mainloop()
 
