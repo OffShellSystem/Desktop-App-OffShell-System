@@ -3,7 +3,7 @@
 -- Bienvenido a OffShell System --
 ![alt text](https://4.bp.blogspot.com/-0cryA22dyKw/XZUQw7cBBQI/AAAAAAAAC4k/w10SDiY77ngeKSFpe1GM0mKKhZJ_PIqjwCK4BGAYYCw/s1280/primate.gif)
 # Aplicación de Escritorio OffShell System.
-  - Última Actualización - Vídeo Yotube: https://www.youtube.com/watch?v=anColXSjwiU
+  - Última Actualización - Vídeo Yotube: https://www.youtube.com/watch?v=6j-aXnhyR00
   Es la primera versión, se incluirá contenido y actualizaciones de forma continua.
 # Instrucciones de instalación y ejecución del programa:
  - Descargar el programa.
