@@ -8,6 +8,8 @@
 # Instrucciones de instalación y ejecución del programa:
  - Descargar el programa.
  - Extraer el archivo en la carpeta deseada.
+ - Instalación obligatoria de librería tkinter con el siguiente comando:
+ # ~$ sudo apt-get install python python-tk idle python-pmw python-imaging
  - Dar permisos de ejecución al archivo con el comando:
   # ~$: chmod +x OffShell-System-AppDesktop.py.
  - Como último paso ejecutar el programa con el comando: 
