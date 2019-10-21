@@ -326,7 +326,7 @@ def actividad_procesador():
 
 
 
-# /Ventana principal con menu_bar.
+# /Ventana principal con menu_bar, empaquetamos a gusto y aderezamos a posiciones del desplegable.
 
 root = Tk()
 
@@ -390,7 +390,7 @@ archSalir=Menu(barramenu, tearoff=0,)
 archSalir.add_command(label="Salir de la aplicación.", font=("URW Chancery L", 14), command=root.destroy, background='DarkRed', activebackground='Black', foreground='white', activeforeground='white')
 
 
-barramenu.add_cascade(label="OffShell System", menu=archMenu, font=("URW Chancery L", 15))
+barramenu.add_cascade(label="OffShell System Tools", menu=archMenu, font=("URW Chancery L", 15))
 
 barramenu.add_cascade(label="Plataformas Web", menu=archPlataformasWeb, font=("URW Chancery L", 15))
 
@@ -420,7 +420,7 @@ Button(botonBienvenido, image=imgicono, cursor="heart", justify="center", bd=3, 
 
 root.mainloop()
 
-
+#OffShell System es una Marca Registrada con la siguiente Licencia. Este programa sin embargo es Software Libre con licencia GPL 3.
 #Licencia de Creative Commons
 #OffShell System by Alexandre Varela Sixto is licensed under a Creative Commons Reconocimiento-NoComercial-SinObraDerivada 4.0 Internacional License.
 #Creado a partir de la obra en https://offshellsystemconnection.blogspot.com/p/software.html.
