@@ -140,32 +140,63 @@ def perfilOffshell():
 
 def usuarios():
 
-	win_usuarios = Tk()
-	win_usuarios.title("Miembros de OffShell System")
-	win_usuarios.config(cursor="heart", background='White')
-	win_usuarios.geometry("1024x720+130+50")
-	win_usuarios.resizable(width=False, height=False)
+	root = Toplevel()
+	root.title("OffShell System - Versión 'Luka' - Modo Testeo")
+	root.geometry("1120x682+80+130")
+	root.resizable(width=False, height=False)
+	root.config(width=300, height=300, cursor="heart", bg="White")
 
 
-	Label(win_usuarios, width=0, anchor="n", text="Miembros de la comunidad de offShell System\nUsuari@s pasionales y desarrolladores de Software independiente", font=("URW Chancery L", 18), bg="black", fg="Red").pack(fill=BOTH, expand=YES)
+	imagen_primate = PhotoImage(file="puertas5.gif")
 
-	botonOffshell=Frame(win_usuarios, width=50, height=50)
-	botonOffshell.pack()
-	botonOffshell.place(x=10, y=100)
 
-	Button(botonOffshell, command=lambda:[offShell()], cursor="heart", text="OffShell (Fundador)", justify="center", bd=5, relief="raised", overrelief="sunken", background="black", activebackground='DarkRed', activeforeground='white', foreground='White', font=("URW Chancery L", 16)).pack()
+	img_boton_menu=Frame(root)
+	img_boton_menu.pack(fill=BOTH, expand=YES)
+	img_boton_menu.place(x=0, y=0)
+	Button(img_boton_menu, image=imagen_primate, cursor="heart", justify="center", bd=0, relief="flat", overrelief="flat", background="black", activebackground='darkblue', activeforeground='white', foreground='White').pack()
 
-	botonSalir=Frame(win_usuarios, width=50, height=50, background='White')
-	botonSalir.pack()
-	botonSalir.place()
+	botonMenu1=Frame(root, width=50, height=100)
+	botonMenu1.place(x=232, y=120)
+	Button(botonMenu1, text="Vacante", cursor="heart", justify="center", bd=1, relief="raised", overrelief="sunken", background="black", activebackground='orange', activeforeground='DarkRed', foreground='orange', font=("URW Chancery L", 14)).pack()
 
-	Button(win_usuarios, command=win_usuarios.destroy, cursor="heart", text="Volver al Menu", justify="center", bd=5, relief="raised", overrelief="sunken", background="black", activebackground='DarkRed', activeforeground='white', foreground='White', font=("URW Chancery L", 16)).pack()
+	botonMenu2=Frame(root, width=50, height=100)
+	botonMenu2.place(x=415, y=120)
+	Button(botonMenu2, text="Vacante", cursor="heart", justify="center", bd=1, relief="raised", overrelief="sunken", background="black", activebackground='orange', activeforeground='DarkRed', foreground='orange', font=("URW Chancery L", 14)).pack()
+	botonMenu3=Frame(root, width=50, height=100)
+	botonMenu3.place(x=10, y=120)
+	Button(botonMenu3, command=lambda:[offShell()], text="OffShell-(Fundador)", cursor="heart", justify="center", bd=1, relief="raised", overrelief="sunken", background="black", activebackground='orange', activeforeground='DarkRed', foreground='orange', font=("URW Chancery L", 14)).pack()
 
+	botonMenu4=Frame(root, width=50, height=100)
+	botonMenu4.place(x=967, y=120)
+	Button(botonMenu4, text="Vacante", cursor="heart", justify="center", bd=1, relief="raised", overrelief="sunken", background="black", activebackground='orange', activeforeground='DarkRed', foreground='orange', font=("URW Chancery L", 14)).pack()
+
+	botonMenu5=Frame(root, width=50, height=100)
+	botonMenu5.place(x=601, y=120)
+	Button(botonMenu5, text="Vacante", cursor="heart", justify="center", bd=1, relief="raised", overrelief="sunken", background="black", activebackground='orange', activeforeground='DarkRed', foreground='orange', font=("URW Chancery L", 14)).pack()
+
+	botonMenu7=Frame(root, width=50, height=100)
+	botonMenu7.place(x=782, y=120)
+	Button(botonMenu7, text="Vacante", cursor="heart", justify="center", bd=1, relief="raised", overrelief="sunken", background="black", activebackground='orange', activeforeground='DarkRed', foreground='orange', font=("URW Chancery L", 14)).pack()
+
+
+
+
+	botonSalir=Frame(root, width=50, height=100)
+	botonSalir.place(x=790, y=568)
+	Button(botonSalir, command=lambda:[root.destroy()], text="Salir", cursor="heart", justify="center", bd=1, relief="raised", overrelief="sunken", background="gray", activebackground='black', activeforeground='orange', foreground='DarkRed', font=("URW Chancery L", 14)).pack()
+
+	botonMenu_Web=Frame(root, width=50, height=100)
+	botonMenu_Web.place(x=530, y=440)
+	Button(botonMenu_Web, command=lambda:[web_action()], text="Visita la Tienda de Software\nOffShellSystem.tk", cursor="heart", justify="center", bd=1, relief="flat", overrelief="flat", background="gray", activebackground='black', activeforeground='white', foreground='black', font=("URW Chancery L", 14)).pack()
+
+	root.mainloop()
+
+	
 	pass
 
 def offShell():
 
-	win_offshell = Tk()
+	win_offshell = Toplevel()
 	win_offshell.title("Tienda de Software OffSehll System")
 	win_offshell.config(cursor="heart", background='black')
 	win_offshell.resizable(width=False, height=False)
@@ -326,7 +357,7 @@ def actividad_procesador():
 
 
 
-# /Ventana principal con menu_bar, empaquetamos a gusto y aderezamos a posiciones del desplegable.
+# /Ventana principal con menu_bar.
 
 root = Tk()
 
@@ -410,7 +441,7 @@ wmenu.pack(fill=BOTH, expand=YES)
 # /Imagen de fondo.
 
 imgicono = PhotoImage(file="world.gif")
-
+imagen_primate = PhotoImage(file="puertas5.gif")
 # /Botones de pantalla de inicio
 
 botonBienvenido=Frame(root, width=1024, height=1024)
