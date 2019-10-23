@@ -375,15 +375,27 @@ archMenu=Menu(barramenu, tearoff=0)
 
 archMenu.add_command(label="Instalación.(Recomendada)", command=instalacion, font=("URW Chancery L", 14), background='DarkRed', activebackground='black', foreground='white', activeforeground='white')
 
+archMenu.add_separator(background='DarkRed')
+
 archMenu.add_command(label="Métrica Memoria Ram", command=Ram_Metricas, font=("URW Chancery L", 14), background='DarkRed', activebackground='Black', foreground='white', activeforeground='white')
+
+archMenu.add_separator(background='DarkRed')
 
 archMenu.add_command(label="Speed Test Internet", command=speedtest, font=("URW Chancery L", 14), background='DarkRed', activebackground='Black', foreground='white', activeforeground='white')
 
+archMenu.add_separator(background='DarkRed')
+
 archMenu.add_command(label="Gía Comandos Gnu", command=comandos_gnu, font=("URW Chancery L", 14), background='DarkRed', activebackground='black', foreground='white', activeforeground='white')
+
+archMenu.add_separator(background='DarkRed')
 
 archMenu.add_command(label="Especificaciones Hardware", command=hardware_metricas, font=("URW Chancery L", 14), background='DarkRed', activebackground='black', foreground='white', activeforeground='white')
 
+archMenu.add_separator(background='DarkRed')
+
 archMenu.add_command(label="Especificaciones Procesador", command=procesador, font=("URW Chancery L", 14), background='DarkRed', activebackground='black', foreground='white', activeforeground='white')
+
+archMenu.add_separator(background='DarkRed')
 
 archMenu.add_command(label="Actividad Procesos Procesador", command=actividad_procesador, font=("URW Chancery L", 14), background='DarkRed', activebackground='black', foreground='white', activeforeground='white')
 
@@ -394,7 +406,11 @@ archPlataformasWeb=Menu(barramenu, tearoff=0)
 
 archPlataformasWeb.add_command(label="Ver OffShell System Classic", command=openWeb, font=("URW Chancery L", 14), background='DarkRed', activebackground='Black', foreground='white', activeforeground='white')
 
+archPlataformasWeb.add_separator(background='DarkRed')
+
 archPlataformasWeb.add_command(label="Ver Blog OffShell System Connection", command=openWeb2, font=("URW Chancery L", 14), background='DarkRed', activebackground='Black', foreground='white', activeforeground='white')
+
+archPlataformasWeb.add_separator(background='DarkRed')
 
 archPlataformasWeb.add_command(label="Ver Git Hub", command=openWeb3, font=("URW Chancery L", 14), background='DarkRed', activebackground='black', foreground='white', activeforeground='white')
 
@@ -412,6 +428,8 @@ archMiembros.add_command(label="Ver Usuari@s OffShell System", command=usuarios,
 archsobreNosotros=Menu(barramenu, tearoff=0)
 
 archsobreNosotros.add_command(label="Proyecto OffShell System", command=sobreNosotros, font=("URW Chancery L", 14), background='DarkRed', activebackground='black', foreground='white', activeforeground='white')
+
+archsobreNosotros.add_separator(background='DarkRed')
 
 archsobreNosotros.add_command(label="Únete como Usuari@", command=unete, font=("URW Chancery L", 14), background='DarkRed', activebackground='black', foreground='white', activeforeground='white')
 
