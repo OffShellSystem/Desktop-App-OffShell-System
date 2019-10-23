@@ -157,26 +157,26 @@ def usuarios():
 
 	botonMenu1=Frame(root, width=50, height=100)
 	botonMenu1.place(x=232, y=120)
-	Button(botonMenu1, text="Vacante", cursor="heart", justify="center", bd=1, relief="raised", overrelief="sunken", background="black", activebackground='orange', activeforeground='DarkRed', foreground='orange', font=("URW Chancery L", 14)).pack()
+	Button(botonMenu1, text="Vacante", cursor="heart", justify="center", bd=1, relief="raised", overrelief="sunken", background="black", activebackground='DarkRed', activeforeground='orange', foreground='orange', font=("URW Chancery L", 14)).pack()
 
 	botonMenu2=Frame(root, width=50, height=100)
 	botonMenu2.place(x=415, y=120)
-	Button(botonMenu2, text="Vacante", cursor="heart", justify="center", bd=1, relief="raised", overrelief="sunken", background="black", activebackground='orange', activeforeground='DarkRed', foreground='orange', font=("URW Chancery L", 14)).pack()
+	Button(botonMenu2, text="Vacante", cursor="heart", justify="center", bd=1, relief="raised", overrelief="sunken", background="black", activebackground='DarkRed', activeforeground='orange', foreground='orange', font=("URW Chancery L", 14)).pack()
 	botonMenu3=Frame(root, width=50, height=100)
 	botonMenu3.place(x=10, y=120)
-	Button(botonMenu3, command=lambda:[offShell()], text="OffShell-(Fundador)", cursor="heart", justify="center", bd=1, relief="raised", overrelief="sunken", background="black", activebackground='orange', activeforeground='DarkRed', foreground='orange', font=("URW Chancery L", 14)).pack()
+	Button(botonMenu3, command=lambda:[offShell()], text="OffShell-(Fundador)", cursor="heart", justify="center", bd=1, relief="raised", overrelief="sunken", background="black", activebackground='DarkRed', activeforeground='orange', foreground='orange', font=("URW Chancery L", 14)).pack()
 
 	botonMenu4=Frame(root, width=50, height=100)
 	botonMenu4.place(x=967, y=120)
-	Button(botonMenu4, text="Vacante", cursor="heart", justify="center", bd=1, relief="raised", overrelief="sunken", background="black", activebackground='orange', activeforeground='DarkRed', foreground='orange', font=("URW Chancery L", 14)).pack()
+	Button(botonMenu4, text="Vacante", cursor="heart", justify="center", bd=1, relief="raised", overrelief="sunken", background="black", activebackground='DarkRed', activeforeground='orange', foreground='orange', font=("URW Chancery L", 14)).pack()
 
 	botonMenu5=Frame(root, width=50, height=100)
 	botonMenu5.place(x=601, y=120)
-	Button(botonMenu5, text="Vacante", cursor="heart", justify="center", bd=1, relief="raised", overrelief="sunken", background="black", activebackground='orange', activeforeground='DarkRed', foreground='orange', font=("URW Chancery L", 14)).pack()
+	Button(botonMenu5, text="Vacante", cursor="heart", justify="center", bd=1, relief="raised", overrelief="sunken", background="black", activebackground='DarkRed', activeforeground='orange', foreground='orange', font=("URW Chancery L", 14)).pack()
 
 	botonMenu7=Frame(root, width=50, height=100)
 	botonMenu7.place(x=782, y=120)
-	Button(botonMenu7, text="Vacante", cursor="heart", justify="center", bd=1, relief="raised", overrelief="sunken", background="black", activebackground='orange', activeforeground='DarkRed', foreground='orange', font=("URW Chancery L", 14)).pack()
+	Button(botonMenu7, text="Vacante", cursor="heart", justify="center", bd=1, relief="raised", overrelief="sunken", background="black", activebackground='DarkRed', activeforeground='orange', foreground='orange', font=("URW Chancery L", 14)).pack()
 
 
 
