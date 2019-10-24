@@ -235,19 +235,15 @@ def Ram_Metricas():
 	p = sub.Popen(["free"],stdout=sub.PIPE,stderr=sub.PIPE)
 	output, errors = p.communicate()
 	
-	win_ram = tk.Tk()
-	win_ram.title("Luka Vision. Test Mode")
-	win_ram.geometry("600x420+330+190")
-	win_ram.resizable(width=False, height=False)
-	win_ram.config(width=300, height=300, cursor="heart", bg="black")
 
-	text = tk.Text(win_ram)
+	text = tk.Text(root, width=130, height=30)
 	text.pack()
+	text.place(x=55, y=20)
 	text.insert(tk.END, output)
 
-	botonVolver=Frame(win_ram, width=50, height=100)
-	botonVolver.place(x=250, y=350)
-	Button(botonVolver, command=lambda:[win_ram.destroy()], text="Volver", cursor="heart", justify="center", bd=1, relief="raised", overrelief="sunken", background="black", activebackground='DarkRed', activeforeground='white', foreground='White', font=("URW Chancery L", 20)).pack()
+	botonVolver=Frame(root, width=50, height=100)
+	botonVolver.place(x=890, y=410)
+	Button(botonVolver, command=lambda:[text.destroy(), botonVolver.destroy()], text="Cerrar", cursor="heart", justify="center", bd=1, relief="raised", overrelief="sunken", background="black", activebackground='DarkRed', activeforeground='white', foreground='White', font=("URW Chancery L", 20)).pack()
 
 
 	pass
@@ -258,18 +254,14 @@ def speedtest():
 	p = sub.Popen(["speedtest"],stdout=sub.PIPE,stderr=sub.PIPE)
 	output, errors = p.communicate()
 	
-	win_test_internet = tk.Tk()
-	win_test_internet.title("Luka Vision. Test Mode")
-	win_test_internet.geometry("600x420+330+190")
-	win_test_internet.resizable(width=False, height=False)
-	win_test_internet.config(width=300, height=300, cursor="heart", bg="black")
-	text = tk.Text(win_test_internet)
+	text = tk.Text(root, width=130, height=30)
 	text.pack()
+	text.place(x=55, y=20)
 	text.insert(tk.END, output)
 
-	botonVolver=Frame(win_test_internet, width=50, height=100)
-	botonVolver.place(x=250, y=350)
-	Button(botonVolver, command=lambda:[win_test_internet.destroy()], text="Volver", cursor="heart", justify="center", bd=1, relief="raised", overrelief="sunken", background="black", activebackground='orange', activeforeground='white', foreground='White', font=("URW Chancery L", 20)).pack()
+	botonVolver=Frame(root, width=50, height=100)
+	botonVolver.place(x=890, y=410)
+	Button(botonVolver, command=lambda:[text.destroy(), botonVolver.destroy()], text="Cerrar", cursor="heart", justify="center", bd=1, relief="raised", overrelief="sunken", background="black", activebackground='DarkRed', activeforeground='white', foreground='White', font=("URW Chancery L", 20)).pack()
 
 
 	pass
@@ -278,18 +270,14 @@ def comandos_gnu():
 	p = sub.Popen(["info"],stdout=sub.PIPE,stderr=sub.PIPE)
 	output, errors = p.communicate()
 	
-	win_comandos_gnu = tk.Tk()
-	win_comandos_gnu.title("Luka Vision. Test Mode")
-	win_comandos_gnu.geometry("600x420+330+190")
-	win_comandos_gnu.resizable(width=False, height=False)
-	win_comandos_gnu.config(width=300, height=300, cursor="heart", bg="black")
-	text = tk.Text(win_comandos_gnu)
+	text = tk.Text(root, width=130, height=30)
 	text.pack()
+	text.place(x=55, y=20)
 	text.insert(tk.END, output)
 
-	botonVolver=Frame(win_comandos_gnu, width=50, height=100)
-	botonVolver.place(x=250, y=350)
-	Button(botonVolver, command=lambda:[win_comandos_gnu.destroy()], text="Volver", cursor="heart", justify="center", bd=1, relief="raised", overrelief="sunken", background="black", activebackground='orange', activeforeground='white', foreground='White', font=("URW Chancery L", 20)).pack()
+	botonVolver=Frame(root, width=50, height=100)
+	botonVolver.place(x=890, y=410)
+	Button(botonVolver, command=lambda:[text.destroy(), botonVolver.destroy()], text="Cerrar", cursor="heart", justify="center", bd=1, relief="raised", overrelief="sunken", background="black", activebackground='DarkRed', activeforeground='white', foreground='White', font=("URW Chancery L", 20)).pack()
 
 	pass
 
@@ -298,18 +286,14 @@ def hardware_metricas():
 	p = sub.Popen(["lshw"],stdout=sub.PIPE,stderr=sub.PIPE)
 	output, errors = p.communicate()
 	
-	win_comandos_gnu = tk.Tk()
-	win_comandos_gnu.title("Luka Vision. Test Mode")
-	win_comandos_gnu.geometry("600x420+330+190")
-	win_comandos_gnu.resizable(width=False, height=False)
-	win_comandos_gnu.config(width=300, height=300, cursor="heart", bg="black")
-	text = tk.Text(win_comandos_gnu)
+	text = tk.Text(root, width=130, height=30)
 	text.pack()
+	text.place(x=55, y=20)
 	text.insert(tk.END, output)
 
-	botonVolver=Frame(win_comandos_gnu, width=50, height=100)
-	botonVolver.place(x=250, y=350)
-	Button(botonVolver, command=lambda:[win_comandos_gnu.destroy()], text="Volver", cursor="heart", justify="center", bd=1, relief="raised", overrelief="sunken", background="black", activebackground='orange', activeforeground='white', foreground='White', font=("URW Chancery L", 20)).pack()
+	botonVolver=Frame(root, width=50, height=100)
+	botonVolver.place(x=890, y=410)
+	Button(botonVolver, command=lambda:[text.destroy(), botonVolver.destroy()], text="Cerrar", cursor="heart", justify="center", bd=1, relief="raised", overrelief="sunken", background="black", activebackground='DarkRed', activeforeground='white', foreground='White', font=("URW Chancery L", 20)).pack()
 
 	pass
 
@@ -318,18 +302,14 @@ def procesador():
 	p = sub.Popen(["lscpu"],stdout=sub.PIPE,stderr=sub.PIPE)
 	output, errors = p.communicate()
 	
-	win_comandos_gnu = tk.Tk()
-	win_comandos_gnu.title("Luka Vision. Test Mode")
-	win_comandos_gnu.geometry("600x420+330+190")
-	win_comandos_gnu.resizable(width=False, height=False)
-	win_comandos_gnu.config(width=300, height=300, cursor="heart", bg="black")
-	text = tk.Text(win_comandos_gnu)
+	text = tk.Text(root, width=130, height=30)
 	text.pack()
+	text.place(x=55, y=20)
 	text.insert(tk.END, output)
 
-	botonVolver=Frame(win_comandos_gnu, width=50, height=100)
-	botonVolver.place(x=250, y=350)
-	Button(botonVolver, command=lambda:[win_comandos_gnu.destroy()], text="Volver", cursor="heart", justify="center", bd=1, relief="raised", overrelief="sunken", background="black", activebackground='orange', activeforeground='white', foreground='White', font=("URW Chancery L", 20)).pack()
+	botonVolver=Frame(root, width=50, height=100)
+	botonVolver.place(x=890, y=410)
+	Button(botonVolver, command=lambda:[text.destroy(), botonVolver.destroy()], text="Cerrar", cursor="heart", justify="center", bd=1, relief="raised", overrelief="sunken", background="black", activebackground='DarkRed', activeforeground='white', foreground='White', font=("URW Chancery L", 20)).pack()
 
 	pass
 
@@ -339,18 +319,14 @@ def actividad_procesador():
 	p = sub.Popen(['who', '-a'],stdout=sub.PIPE,stderr=sub.PIPE)
 	output, errors = p.communicate()
 	
-	win_comandos_gnu = tk.Tk()
-	win_comandos_gnu.title("Luka Vision. Test Mode")
-	win_comandos_gnu.geometry("600x420+330+190")
-	win_comandos_gnu.resizable(width=False, height=False)
-	win_comandos_gnu.config(width=300, height=300, cursor="heart", bg="black")
-	text = tk.Text(win_comandos_gnu)
+	text = tk.Text(root, width=130, height=30)
 	text.pack()
+	text.place(x=55, y=20)
 	text.insert(tk.END, output)
 
-	botonVolver=Frame(win_comandos_gnu, width=50, height=100)
-	botonVolver.place(x=250, y=350)
-	Button(botonVolver, command=lambda:[win_comandos_gnu.destroy()], text="Volver", cursor="heart", justify="center", bd=1, relief="raised", overrelief="sunken", background="black", activebackground='orange', activeforeground='white', foreground='White', font=("URW Chancery L", 20)).pack()
+	botonVolver=Frame(root, width=50, height=100)
+	botonVolver.place(x=890, y=410)
+	Button(botonVolver, command=lambda:[text.destroy(), botonVolver.destroy()], text="Cerrar", cursor="heart", justify="center", bd=1, relief="raised", overrelief="sunken", background="black", activebackground='DarkRed', activeforeground='white', foreground='White', font=("URW Chancery L", 20)).pack()
 
 	pass
 
