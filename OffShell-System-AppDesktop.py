@@ -37,38 +37,31 @@ def instalacion():
 
 
 def software(): # Definición de la pantalla de Tienda de Software.
-	ventanasoft = Tk()
-	ventanasoft.title("Tienda de Software OffSehll System")
-	ventanasoft.config(cursor="heart", background='black')
-	ventanasoft.resizable(width=False, height=False)
-	ventanasoft.geometry("400x400+450+200")
-
-	Label(ventanasoft, width=0, anchor="s", text="Bienvenido Usuari@\n-- Aplicación Versión {Luka} --\n-- Licencia GPL Versión 3 --", font=("URW Chancery L", 18), bg="black", fg="White").pack(fill=BOTH, expand=YES)
-
-	boton1=Frame(ventanasoft, cursor="heart", background="black")
-	boton1.pack(side='top', fill=BOTH, expand=YES)
+	
+	boton1=tk.Frame(root, cursor="heart", background="black")
+	boton1.pack()
+	boton1.place(x=410, y=100)
 
 	Button(boton1, cursor="heart", text="Software Comunidad", justify="center", bd=5, relief="raised", overrelief="sunken", background="black", activebackground='DarkRed', activeforeground='white', foreground='White', font=("URW Chancery L", 16)).pack()
 
-	boton1=Frame(ventanasoft, cursor="heart", background="black")
-	boton1.pack(side='top', fill=BOTH, expand=YES)
+	boton2=tk.Frame(root, cursor="heart", background="black")
+	boton2.pack(side='top', fill=BOTH, expand=YES)
+	boton2.place(x=410, y=140)
 
-	Button(boton1, cursor="heart", text="Software OffShell System", justify="center", bd=5, relief="raised", overrelief="sunken", background="black", activebackground='DarkRed', activeforeground='white', foreground='White', font=("URW Chancery L", 16)).pack()
+	Button(boton2, cursor="heart", text="Software OffShell System", justify="center", bd=5, relief="raised", overrelief="sunken", background="black", activebackground='DarkRed', activeforeground='white', foreground='White', font=("URW Chancery L", 16)).pack()
 
-	boton1=Frame(ventanasoft, cursor="heart", background="black")
-	boton1.pack(side='top', fill=BOTH, expand=YES)
+	boton3=tk.Frame(root, cursor="heart", background="black")
+	boton3.pack(side='top', fill=BOTH, expand=YES)
+	boton3.place(x=410, y=180)
 
-	Button(boton1, cursor="heart", text="Publicar Software", justify="center", bd=5, relief="raised", overrelief="sunken", background="black", activebackground='DarkRed', activeforeground='white', foreground='White', font=("URW Chancery L", 16)).pack()
+	Button(boton3, cursor="heart", text="Publicar Software", justify="center", bd=5, relief="raised", overrelief="sunken", background="black", activebackground='DarkRed', activeforeground='white', foreground='White', font=("URW Chancery L", 16)).pack()
 
-	boton1=Frame(ventanasoft, cursor="heart", background="black")
-	boton1.pack(side='top', fill=BOTH, expand=YES)
+	boton4=tk.Frame(root, cursor="heart", background="black")
+	boton4.pack(side='top', fill=BOTH, expand=YES)
+	boton4.place(x=410, y=220)
 
-	Button(boton1, command=ventanasoft.destroy, text="Salir",cursor="heart", justify="center", bd=5, relief="raised", overrelief="sunken", background="black", activebackground='DarkRed', activeforeground='white', foreground='White', font=("URW Chancery L", 16)).pack()
+	Button(boton4, command=lambda:[boton1.destroy(), boton2.destroy(), boton3.destroy(), boton4.destroy()], text="Salir",cursor="heart", justify="center", bd=5, relief="raised", overrelief="sunken", background="black", activebackground='DarkRed', activeforeground='white', foreground='White', font=("URW Chancery L", 16)).pack()
 
-	boton1=Frame(ventanasoft, cursor="heart", background="black")
-	boton1.pack(side='top', fill=BOTH, expand=YES)
-
-	ventanasoft.mainloop()
 
 	pass
 
