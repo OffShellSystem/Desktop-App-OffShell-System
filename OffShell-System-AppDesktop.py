@@ -32,7 +32,6 @@ def instalacion():
 	call('sudo apt-get install info', shell=True)
 	call('sudo apt-get install hostname', shell=True)
 	call('sudo apt-get install lshw', shell=True)
-
 	pass
 
 
@@ -139,7 +138,6 @@ def usuarios():
 	root.resizable(width=False, height=False)
 	root.config(width=300, height=300, cursor="heart", bg="White")
 
-
 	imagen_primate = PhotoImage(file="puertas5.gif")
 
 
@@ -234,6 +232,9 @@ def Ram_Metricas():
 	text.place(x=55, y=20)
 	text.insert(tk.END, output)
 
+
+
+
 	botonVolver=Frame(root, width=50, height=100)
 	botonVolver.place(x=890, y=410)
 	Button(botonVolver, command=lambda:[text.destroy(), botonVolver.destroy()], text="Cerrar", cursor="heart", justify="center", bd=1, relief="raised", overrelief="sunken", background="black", activebackground='DarkRed', activeforeground='white', foreground='White', font=("URW Chancery L", 20)).pack()
@@ -323,7 +324,20 @@ def actividad_procesador():
 
 	pass
 
+def listado_pip_librerias():
+	p = sub.Popen(['pip', 'list'],stdout=sub.PIPE,stderr=sub.PIPE)
+	output, errors = p.communicate()
+	
+	text = tk.Text(root, width=130, height=30)
+	text.pack()
+	text.place(x=55, y=20)
+	text.insert(tk.END, output)
 
+	botonVolver=Frame(root, width=50, height=100)
+	botonVolver.place(x=890, y=410)
+	Button(botonVolver, command=lambda:[text.destroy(), botonVolver.destroy()], text="Cerrar", cursor="heart", justify="center", bd=1, relief="raised", overrelief="sunken", background="black", activebackground='DarkRed', activeforeground='white', foreground='White', font=("URW Chancery L", 20)).pack()
+
+	pass
 
 
 # /Ventana principal con menu_bar.
@@ -367,6 +381,10 @@ archMenu.add_command(label="Especificaciones Procesador", command=procesador, fo
 archMenu.add_separator(background='DarkRed')
 
 archMenu.add_command(label="Actividad Procesos Procesador", command=actividad_procesador, font=("URW Chancery L", 14), background='DarkRed', activebackground='black', foreground='white', activeforeground='white')
+
+archMenu.add_separator(background='DarkRed')
+
+archMenu.add_command(label="Listado Librerías PIP", command=listado_pip_librerias, font=("URW Chancery L", 14), background='DarkRed', activebackground='black', foreground='white', activeforeground='white')
 
 
 
