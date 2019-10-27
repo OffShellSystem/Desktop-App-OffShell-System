@@ -445,7 +445,7 @@ wmenu.pack(fill=BOTH, expand=YES)
 
 # /Imagen de fondo.
 
-imgicono = PhotoImage(file="world.gif")
+imgicono = PhotoImage(file="fondo_inicio.gif")
 imagen_primate = PhotoImage(file="puertas5.gif")
 # /Botones de pantalla de inicio
 
