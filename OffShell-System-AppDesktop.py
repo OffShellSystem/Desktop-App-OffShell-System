@@ -178,7 +178,7 @@ def usuarios():
 
 	botonMenu_Web=Frame(root, width=50, height=100)
 	botonMenu_Web.place(x=530, y=440)
-	Button(botonMenu_Web, command=lambda:[web_action()], text="Visita la Tienda de Software\nOffShellSystem.tk", cursor="heart", justify="center", bd=1, relief="flat", overrelief="flat", background="gray", activebackground='black', activeforeground='white', foreground='black', font=("URW Chancery L", 14)).pack()
+	Button(botonMenu_Web, command=lambda:[openWeb2()], text="Visita la Tienda de Software\nOffShellSystem.tk", cursor="heart", justify="center", bd=1, relief="flat", overrelief="flat", background="gray", activebackground='black', activeforeground='white', foreground='black', font=("URW Chancery L", 14)).pack()
 
 	root.mainloop()
 
@@ -325,7 +325,7 @@ def actividad_procesador():
 	pass
 
 def listado_pip_librerias():
-	p = sub.Popen(['pip', 'list'],stdout=sub.PIPE,stderr=sub.PIPE)
+	p = sub.Popen(['pip', 'list'],stdout=sub.PIPE,stderr=sub.PIPE,)
 	output, errors = p.communicate()
 	
 	text = tk.Text(root, width=130, height=30)
@@ -452,7 +452,7 @@ imagen_primate = PhotoImage(file="puertas5.gif")
 botonBienvenido=Frame(root, width=1024, height=1024)
 botonBienvenido.pack(fill=BOTH, expand=YES)
 botonBienvenido.place(x=0, y=0)
-Button(botonBienvenido, image=imgicono, cursor="heart", justify="center", bd=3, relief="raised", overrelief="sunken", background="DarkRed", activebackground='DarkRed', activeforeground='white', foreground='White', font=("URW Chancery L", 15)).pack()
+Button(botonBienvenido, image=imgicono, cursor="heart", justify="center", bd=1, relief="raised", overrelief="sunken", background="DarkRed", activebackground='DarkRed', activeforeground='white', foreground='White', font=("URW Chancery L", 15)).pack()
 
 root.mainloop()
 
