@@ -9,8 +9,38 @@ import commands
 import os
 import subprocess as sub
 import Tkinter as tk
+import cv2
+import numpy as np
 
-# /Defino funciones
+
+#Video Introducción a la aplicación
+
+Intro = cv2.VideoCapture('Welcome.mp4')
+
+while(Intro.isOpened()):
+  
+  ret, frame = Intro.read()
+  if ret == True:
+ 
+    
+    cv2.imshow('OffShell System', frame)
+ 	
+    
+    if cv2.waitKey(25) & 0xFF == ord('q'):
+      break
+ 
+  
+  else: 
+    break
+ 
+
+Intro.release()
+
+cv2.destroyAllWindows()
+
+
+
+# Defino funciones
 
 def instalacion():
 
@@ -189,12 +219,14 @@ def offShell():
 
 	win_offshell = Toplevel()
 	win_offshell.title("Tienda de Software OffSehll System")
-	win_offshell.config(cursor="heart", background='black')
+	win_offshell.config(cursor="heart", bg="black")
 	win_offshell.resizable(width=False, height=False)
 	win_offshell.geometry("950x250+170+300")
 
-	Label(win_offshell, width=0, anchor="n", text="Off-Shell significa una partícula sin movimiento en física cuántica.\nEscogí este alias porque estuve sin movimiento durante muchos años en el ámbito tecnológico,\nhasta que por motivos personales descubrí un mundo increíble en las comunidades de Usuari@s.\nPersonas apasionadas y colaborativas que no dudan en fomentar\nun lugar mejor donde interactuar y aprender unos de otros.\nPor tod@s y cada un@ de ell@s me encuentro aquí con vosotr@s, usuari@s del cambio.", font=("URW Chancery L", 18), bg="black", fg="Red").pack(fill=BOTH, expand=YES)
 
+	Label(win_offshell, width=0, anchor="n", text="Off-Shell significa una partícula sin movimiento en física cuántica.\nEscogí este alias porque estuve sin movimiento durante muchos años en el ámbito tecnológico,\nhasta que por motivos personales descubrí un mundo increíble en las comunidades de Usuari@s.\nPersonas apasionadas y colaborativas que no dudan en fomentar\nun lugar mejor donde interactuar y aprender unos de otros.\nPor tod@s y cada un@ de ell@s me encuentro aquí con vosotr@s, usuari@s del cambio.", bg="black", font=("URW Chancery L", 18), fg="Red").pack(fill=BOTH, expand=YES)
+
+	
 	botonOffGit=Frame(win_offshell, width=50, height=50)
 	botonOffGit.pack()
 	botonOffGit.place(x=200, y=200)
@@ -444,6 +476,8 @@ wmenu.place(x=0, y=0, relwidth=1, relheight=1)
 wmenu.pack(fill=BOTH, expand=YES)
 
 # /Imagen de fondo.
+
+imagen_off = PhotoImage(file="mandala.gif")
 
 imgicono = PhotoImage(file="fondo_inicio.gif")
 imagen_primate = PhotoImage(file="puertas5.gif")
