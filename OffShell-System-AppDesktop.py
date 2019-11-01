@@ -42,6 +42,14 @@ cv2.destroyAllWindows()
 
 # Defino funciones
 
+def advertencia():
+	boton_Aviso=Frame(root, width=30, height=10)
+	boton_Aviso.place(x=15, y=49)
+	Button(boton_Aviso, command=lambda:[boton_Aviso.destroy(), instalacion()], text="Si no eres ROOT... \nUn SUDO en la consola te ayudará...\n-Clickame para Continuar-", cursor="heart", justify="center", bd=1, relief="raised", overrelief="sunken", background="black", activebackground='DarkRed', activeforeground='white', foreground='White', font=("URW Chancery L", 26)).pack()
+
+	pass
+
+
 def instalacion():
 
 	win_instalacion = tk.Tk()
@@ -388,7 +396,7 @@ root.config(menu=barramenu, width=300, height=300, cursor="heart")
 
 archMenu=Menu(barramenu, tearoff=0)
 
-archMenu.add_command(label="Instalación.(Recomendada)", command=instalacion, font=("URW Chancery L", 14), background='DarkRed', activebackground='black', foreground='white', activeforeground='white')
+archMenu.add_command(label="Instalación.(Recomendada)", command=advertencia, font=("URW Chancery L", 14), background='DarkRed', activebackground='black', foreground='white', activeforeground='white')
 
 archMenu.add_separator(background='DarkRed')
 
