@@ -15,7 +15,7 @@ import numpy as np
 
 #Video Introducción a la aplicación
 
-Intro = cv2.VideoCapture('Welcome.mp4')
+Intro = cv2.VideoCapture('intro.mp4')
 
 while(Intro.isOpened()):
   
