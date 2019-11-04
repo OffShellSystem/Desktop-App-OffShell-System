@@ -389,8 +389,8 @@ def consola1():
 
 	botonMenu2=Frame(root, width=50, height=100)
 	botonMenu2.pack(fill=BOTH, expand=YES)
-	botonMenu2.place(x=1162, y=386)
-	Button(botonMenu2, command=lambda:[botonMenu2.destroy(), termf.destroy()], text="Cerrar Consola", cursor="heart", justify="center", bd=1, relief="raised", overrelief="sunken", background="black", activebackground='DarkRed', activeforeground='white', foreground='White', font=("URW Chancery L", 12)).pack()
+	botonMenu2.place(x=820, y=495)
+	Button(botonMenu2, command=lambda:[botonMenu2.destroy(), termf.destroy()], text="Cerrar Consola", cursor="heart", justify="center", bd=1, relief="raised", overrelief="sunken", background="black", activebackground='DarkRed', activeforeground='white', foreground='White', font=("URW Chancery L", 14)).pack()
 
 
 	pass
