@@ -15,17 +15,15 @@ import numpy as np
 
 #Video Introducción a la aplicación
 
-Intro = cv2.VideoCapture('intro.mp4')
+intro = cv2.VideoCapture('intro.mp4')
 
-while(Intro.isOpened()):
+while(intro.isOpened()):
   
-  ret, frame = Intro.read()
+  ret, frame = intro.read()
   if ret == True:
- 
     
     cv2.imshow('OffShell System', frame)
- 	
-    
+
     if cv2.waitKey(25) & 0xFF == ord('q'):
       break
  
@@ -34,8 +32,7 @@ while(Intro.isOpened()):
     break
  
 
-Intro.release()
-
+intro.release()
 cv2.destroyAllWindows()
 
 
@@ -380,6 +377,26 @@ def listado_pip_librerias():
 	pass
 
 
+def consola1():
+
+	termf = Frame(root, height=750, width=250) 
+
+	termf.pack(fill=BOTH, expand=0)
+	termf.place(x=100, y=110)
+	termf.config(width=830, height=405)
+	wid = termf.winfo_id() 
+	os.system('xterm -into %d -geometry 600x300 -sb &' % wid)
+
+	botonMenu2=Frame(root, width=50, height=100)
+	botonMenu2.pack(fill=BOTH, expand=YES)
+	botonMenu2.place(x=1162, y=386)
+	Button(botonMenu2, command=lambda:[botonMenu2.destroy(), termf.destroy()], text="Cerrar Consola", cursor="heart", justify="center", bd=1, relief="raised", overrelief="sunken", background="black", activebackground='DarkRed', activeforeground='white', foreground='White', font=("URW Chancery L", 12)).pack()
+
+
+	pass
+
+
+
 # /Ventana principal con menu_bar.
 
 root = Tk()
@@ -427,6 +444,9 @@ archMenu.add_separator(background='DarkRed')
 archMenu.add_command(label="Listado Librerías PIP", command=listado_pip_librerias, font=("URW Chancery L", 14), background='DarkRed', activebackground='black', foreground='white', activeforeground='white')
 
 
+archConsola=Menu(barramenu, tearoff=0)
+
+archConsola.add_command(label="Abrir Consola de Comandos", command=consola1, font=("URW Chancery L", 14), background='DarkRed', activebackground='Black', foreground='white', activeforeground='white')
 
 
 archPlataformasWeb=Menu(barramenu, tearoff=0)
@@ -467,6 +487,8 @@ archSalir.add_command(label="Salir de la aplicación.", font=("URW Chancery L", 
 
 
 barramenu.add_cascade(label="OffShell System Tools", menu=archMenu, font=("URW Chancery L", 15))
+
+barramenu.add_cascade(label="Consola de Comandos", menu=archConsola, font=("URW Chancery L", 15))
 
 barramenu.add_cascade(label="Plataformas Web", menu=archPlataformasWeb, font=("URW Chancery L", 15))
 
