@@ -12,6 +12,10 @@ http://www.shelldredd.tk/
  - Extraer el archivo en la carpeta deseada.
  - Instalación obligatoria de librería tkinter con el siguiente comando:
  # ~$ sudo apt-get install python python-tk idle python-pmw python-imaging
+ - Instalación de PIP y cv2-opencv
+ # sudo apt install python-pip
+ # pip install onpencv-python
+ 
  - Dar permisos de ejecución al archivo con el comando:
   # ~$: chmod +x OffShell-System-AppDesktop.py.
  - Como último paso ejecutar el programa con el comando: 
