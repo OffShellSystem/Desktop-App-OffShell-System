@@ -9,33 +9,6 @@ import commands
 import os
 import subprocess as sub
 import Tkinter as tk
-import cv2
-import numpy as np
-
-
-#Video Introducción a la aplicación
-
-intro = cv2.VideoCapture('intro.mp4')
-
-while(intro.isOpened()):
-  
-  ret, frame = intro.read()
-  if ret == True:
-    
-    cv2.imshow('OffShell System', frame)
-
-    if cv2.waitKey(25) & 0xFF == ord('q'):
-      break
- 
-  
-  else: 
-    break
- 
-
-intro.release()
-cv2.destroyAllWindows()
-
-
 
 # Defino funciones
 
