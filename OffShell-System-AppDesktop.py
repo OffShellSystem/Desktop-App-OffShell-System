@@ -378,6 +378,7 @@ root.title("··· OffShell System Aplication -- Luka Version (0.1) -- for Gnu/L
 root.geometry("1024x720+130+50")
 root.resizable(width=False, height=False)
 
+root.tk.call('wm', 'iconphoto', root._w, tk.PhotoImage(file='primate.gif'))
 
 barramenu=Menu(root, relief=RAISED, cursor="heart", activebackground='Black', foreground='white', activeforeground='Red', activeborderwidth=3, bg='Black', bd=5)
 
